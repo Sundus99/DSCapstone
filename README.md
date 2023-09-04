@@ -7,9 +7,12 @@
     - [x] look for duplicate rows and columns
     - [x] clean the header (parts of header is on line 1 and parts of it is on line 2)
 - [ ] Visualize the data for relationships
-    - [ ] Min/Max Fuel COnsumption By Car Type i.e. SUV, light truck, car etc
+    - [x] Min/Max Fuel COnsumption By Car Type i.e. SUV, light truck, car etc
+        - [ ] add insight
     - [x] Min/Max CO2 rating by Car Type
-    - [ ] Min/Max smog rating by Car Type 
+        - [ ] add insight
+    - [x] Min/Max smog rating by Car Type
+        - [ ] add insight 
 - [ ] Clean the prices data
     - [ ] Split Make Model Year into seprate columns
     - [ ] determine null values
