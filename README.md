@@ -4,6 +4,8 @@
 - [x] Import the Data
 - [x] Clean the Data for fuel consumption
     - [x] Determine null values and handle them
+    - [x] Check if the data types are correct
+    - [x] Check if there is any other cleaning needed (cases, similar values but diff format etc)
     - [x] look for duplicate rows and columns
     - [x] clean the header (parts of header is on line 1 and parts of it is on line 2)
 - [ ] Visualize the data for relationships
