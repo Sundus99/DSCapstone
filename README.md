@@ -6,6 +6,24 @@ The users are millennials, zillenials and generation Z as these generations care
 I found someone on Kaggle using the same Fuel Consumption dataset from the open data by government of Canada website but they seem to be using it to determine factors that influence CO2 emissions. While what I am trying to do is build a recommendation system combining different datasets to provide users suggestion on buying a car within their budget that’s environmentally friendly. This is the project I found that is using similar dataset but for different purpose: CO2 Emission by Vehicles | Kaggle
 # The Impact
 As mentioned in the problem area, it will help people be environmentally responsible while staying within their budget because not everyone can afford an electric vehicle and the cost of living has increased. So, it will solve 2 problems, help users choose fuel efficient cars with low CO2 emissions killing 2 birds with one stone.
+# Data Dictionary for Fuel Consumption Rating dataset (main dataset)
+| Column                           | Non-Null Count  | Dtype   |
+|----------------------------------|-----------------|---------|
+| Model_Year                       | 6951 non-null   | int64   |
+| Make                             | 6951 non-null   | object  |
+| Model                            | 6951 non-null   | object  |
+| Vehicle_Class                    | 6951 non-null   | object  |
+| Engine_Size(L)                   | 6951 non-null   | float64 |
+| Cylinders                        | 6951 non-null   | int64   |
+| Transmission                     | 6951 non-null   | object  |
+| Fuel_Type                        | 6951 non-null   | object  |
+| Fuel_Consumption-City(L/100 km)  | 6951 non-null   | float64 |
+| Fuel_Consumption-Hwy(L/100 km)   | 6951 non-null   | float64 |
+| Fuel_Consumption-Comb(L/100 km)  | 6951 non-null   | float64 |
+| CO2_Emissions(g/km)              | 6951 non-null   | int64   |
+| CO2_Rating                       | 6951 non-null   | int64   |
+| Smog_Rating                      | 6951 non-null   | int64   |
+
 # DSCapstone Task List
 - [x] Collect Data for Fuel Consumption for cars
 - [X] Collect prices data
