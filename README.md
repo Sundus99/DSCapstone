@@ -50,10 +50,11 @@ As mentioned in the problem area, it will help people be environmentally respons
     - [x] Box plot by Make for Smog Rating for each Vehicle Class
     - [x] Box plot by Make for Smog Rating
         - [x] add insight for all graphs 
-- [ ] Clean the prices data
-    - [ ] Split Make Model Year into seprate columns
-    - [ ] determine null values
-    - [ ] look for duplicate rows and columns
-    - [ ] for one of the prices files convert indian rupees to candian dollars from 2 years ago exchange rate
-- [ ] Join the prices data
+- [x] Clean the prices data
+    - [x] Split Make Model Year into seprate columns
+    - [x] determine null values
+    - [x] look for duplicate rows and columns
+    - [x] check if the prices makes sense if not deal accordingly
+    - [x] for one of the prices files convert USD to candian dollars from 2 years ago exchange rate
+- [x] Join the prices data
        
