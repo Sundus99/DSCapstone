@@ -42,4 +42,6 @@ As mentioned in the problem area, it will help people be environmentally respons
 - After backward feature selection, use DBScan model as a final clustering algorithm.
 - Analyze the clusters to label them as green or not green
 - Add missing data for the prices and resolve any issues
-- Build the streamlit app  
+- Build the streamlit app and deploy it 
+# Check Out my App Here
+https://green-vehicle-recommender-system.streamlit.app/
