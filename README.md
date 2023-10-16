@@ -24,37 +24,22 @@ As mentioned in the problem area, it will help people be environmentally respons
 | CO2_Rating                       | 6951 non-null   | int64   |
 | Smog_Rating                      | 6951 non-null   | int64   |
 
-# DSCapstone Task List
-- [x] Collect Data for Fuel Consumption for cars
-- [X] Collect prices data
-- [x] Import the Data
-- [x] Clean the Data for fuel consumption
-    - [x] Determine null values and handle them
-    - [x] Check if the data types are correct
-    - [x] Check if there is any other cleaning needed (cases, similar values but diff format etc)
-    - [x] look for duplicate rows and columns
-    - [x] clean the header (parts of header is on line 1 and parts of it is on line 2)
-- [x] Visualize the data for relationships
-    - [x] Box Plot Fuel Consumption By Vehicle Class i.e. SUV, light truck, car etc
-    - [x] Histogram to see the distribution of Fuel Consumption
-    - [x] Box plot by Make for Fuel Consumption for each Vehicle Class
-    - [x] Box plot by Make for Fuel Consumption
-        - [x] add insight for all graphs 
-    - [x] Box plot of CO2 rating by Vehicle Class
-    - [x] Histogram to see the distribution of CO2 rating
-    - [x] Box plot by Make for CO2 rating for each Vehicle Class
-    - [x] Box plot by Make for CO2 rating
-        - [x] add insight for all graphs 
-    - [x] Box Plot of smog rating by Vehicle Class
-    - [x] Histogram to see the distribution of Smog rating
-    - [x] Box plot by Make for Smog Rating for each Vehicle Class
-    - [x] Box plot by Make for Smog Rating
-        - [x] add insight for all graphs 
-- [x] Clean the prices data
-    - [x] Split Make Model Year into seprate columns
-    - [x] determine null values
-    - [x] look for duplicate rows and columns
-    - [x] check if the prices makes sense if not deal accordingly
-    - [x] for one of the prices files convert USD to candian dollars from 2 years ago exchange rate
-- [x] Join the prices data
-       
+# Sprint 1  
+**File:** Capstone.ipynb  
+- Data cleaning and wrangling
+- EDA
+- Some prices added from prices dataset to the fuel consumption rating dataset
+# Sprint 2  
+**File:** Capstone Sprint 2.ipynb  
+- used clean data from sprint 1 ommitting the prices column as some were missing and didn't need to include prices for modeling anyways as explained in the overview of the Sprint 2 capstone
+- Performed Feature Selection and Exngineering for columns with multicollinearity (dealt with numerical (VIF ANalysis) and categorical columns (chi2 test))
+- Baseline Modeling, tuning, and evaluation based on only 4 features as a test
+- Visualization of the clusters
+- Post processing and basic analysis of the clusters
+# Focus for this Sprint  
+**File:** Capstone_Sprint3.ipynb  
+- Use the feature selected data from Sprint 2 for further feature selection using backward selection as there are columns I am not sure about whether to include or not. These columns include, Make, Transmission_Type and Fuel_Type.
+- After backward feature selection, use DBScan model as a final clustering algorithm.
+- Analyze the clusters to label them as green or not green
+- Add missing data for the prices and resolve any issues
+- Build the streamlit app  
