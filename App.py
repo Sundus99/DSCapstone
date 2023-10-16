@@ -43,7 +43,7 @@ st.set_page_config(layout="wide")
 
 # Add title and the instruction for the user
 st.title("🍃Green Vehicle Recommender System🚗")
-st.write("Please Select Price Range and Vehicle Class for Tailored Recommendation 😃")
+st.markdown("<font color = 'green'>Please Select Price Range and Vehicle Class for Tailored Recommendation 😃</font>", unsafe_allow_html=True)
 
 # adding drop down menu for user to select price range start and end and vehicle class
 price_start = st.selectbox('Price_start',(price_start_list))
@@ -52,9 +52,13 @@ vehicle_class_op = st.selectbox('Vehicle Type',(vehicle_classes))
 
 # filtering dataframe based on user input
 df = df[(df['Price'] >= float(price_start)) & (df['Price'] < float(price_end)) & (df['Vehicle_Class']==vehicle_class_op)]
+df = df.sort_values(by=['Fuel_Consumption-Comb(L/100 km)','Price'], ascending=[True, True])
 
 # styling my dataframe
+
+# Styling the values inside the dataframe
 df = df.style.set_properties(**{'background-color':'lightgreen','color':'black','border-color':'green','text-align': 'left'}).set_table_styles([dict(selector='th', props=[('text-align', 'centre')])])
+# Styling the header
 df.set_table_styles([{
     'selector': 'th',  # Select the table header cells
     'props': [('background-color', 'green'), ('color', 'white')]
