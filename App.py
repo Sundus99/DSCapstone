@@ -37,6 +37,9 @@ vehicle_classes = df['Vehicle_Class'].unique().tolist()
 price_start_list = ['10000','20000','30000','40000']
 price_end_list = ['20000','30000','40000','50000']
 
+# renaming the price column to Average Price so user can know this just by looking at it
+df = df.rename(columns = {'Price':'Average Price(CDN)'})
+
 # Now it is ready for the app
 # my app was squished in the centre and my dataframe was cutting off found this fix
 st.set_page_config(layout="wide") 
@@ -51,8 +54,8 @@ price_end = st.selectbox('Price_end',(price_end_list))
 vehicle_class_op = st.selectbox('Vehicle Type',(vehicle_classes))
 
 # filtering dataframe based on user input
-df = df[(df['Price'] >= float(price_start)) & (df['Price'] < float(price_end)) & (df['Vehicle_Class']==vehicle_class_op)]
-df = df.sort_values(by=['Fuel_Consumption-Comb(L/100 km)','Price'], ascending=[True, True])
+df = df[(df['Average Price(CDN)'] >= float(price_start)) & (df['Average Price(CDN)'] < float(price_end)) & (df['Vehicle_Class']==vehicle_class_op)]
+df = df.sort_values(by=['Fuel_Consumption-Comb(L/100 km)','Average Price(CDN)'], ascending=[True, True])
 
 # styling my dataframe
 
@@ -63,9 +66,24 @@ df.set_table_styles([{
     'selector': 'th',  # Select the table header cells
     'props': [('background-color', 'green'), ('color', 'white')]
 }])
+
 # Providing Legend for Transmission for user readability
-st.markdown(Legend for Transmission:  
-            `| A: Automatic | AM: Automated Manual | AS: Automatic with Select Shift | AV: Continuously Variable | M: Manual | 3-10: Number of Gears |`)
+
+# I tried doing it in markdown way as done in Jupyter notebook but it resulted in error so doing it in HTML
+st.markdown("<p style='font-weight: bold;'>Legend for Transmission:</p>\n", unsafe_allow_html=True)
+trans_legend = """
+    <table border="2" width="100%">
+    <tr>
+    <td>A: Automatic</td>
+    <td>AM: Automated Manual</td>
+    <td>AS: Automatic with Select Shift</td>
+    <td>AV: Continuously Variable</td>
+    <td>M: Manual</td>
+    <td>3-10: Number of Gears</td>
+    </tr>
+    </table>
+"""
+st.markdown(trans_legend,unsafe_allow_html=True)
 
 # displaying my dataframe
 st.table(df)
