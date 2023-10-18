@@ -57,15 +57,7 @@ vehicle_class_op = st.selectbox('Vehicle Type',(vehicle_classes))
 df = df[(df['Average_Price(CDN)'] >= float(price_start)) & (df['Average_Price(CDN)'] < float(price_end)) & (df['Vehicle_Class']==vehicle_class_op)]
 df = df.sort_values(by=['Fuel_Consumption-Comb(L/100 km)','Average_Price(CDN)'], ascending=[True, True])
 
-# styling my dataframe
 
-# Styling the values inside the dataframe
-df = df.style.set_properties(**{'background-color':'lightgreen','color':'black','border-color':'green','text-align': 'left'}).set_table_styles([dict(selector='th', props=[('text-align', 'centre')])])
-# Styling the header
-df.set_table_styles([{
-    'selector': 'th',  # Select the table header cells
-    'props': [('background-color', 'green'), ('color', 'white')]
-}])
 
 # Providing Legend for Transmission for user readability
 
@@ -84,6 +76,16 @@ trans_legend = """
     </table>
 """
 st.markdown(trans_legend,unsafe_allow_html=True)
+
+# styling my dataframe
+
+# Styling the values inside the dataframe
+df = df.style.set_properties(**{'background-color':'lightgreen','color':'black','border-color':'green','text-align': 'left'}).set_table_styles([dict(selector='th', props=[('text-align', 'centre')])])
+# Styling the header
+df.set_table_styles([{
+    'selector': 'th',  # Select the table header cells
+    'props': [('background-color', 'green'), ('color', 'white')]
+}])
 
 # displaying my dataframe
 st.table(df)
