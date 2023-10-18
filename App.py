@@ -38,7 +38,7 @@ price_start_list = ['10000','20000','30000','40000']
 price_end_list = ['20000','30000','40000','50000']
 
 # renaming the price column to Average Price so user can know this just by looking at it
-df = df.rename(columns = {'Price':'Average Price(CDN)'})
+df = df.rename(columns = {'Price':'Average_Price(CDN)'})
 
 # Now it is ready for the app
 # my app was squished in the centre and my dataframe was cutting off found this fix
@@ -54,8 +54,8 @@ price_end = st.selectbox('Price_end',(price_end_list))
 vehicle_class_op = st.selectbox('Vehicle Type',(vehicle_classes))
 
 # filtering dataframe based on user input
-df = df[(df['Average Price(CDN)'] >= float(price_start)) & (df['Average Price(CDN)'] < float(price_end)) & (df['Vehicle_Class']==vehicle_class_op)]
-df = df.sort_values(by=['Fuel_Consumption-Comb(L/100 km)','Average Price(CDN)'], ascending=[True, True])
+df = df[(df['Average_Price(CDN)'] >= float(price_start)) & (df['Average_Price(CDN)'] < float(price_end)) & (df['Vehicle_Class']==vehicle_class_op)]
+df = df.sort_values(by=['Fuel_Consumption-Comb(L/100 km)','Average_Price(CDN)'], ascending=[True, True])
 
 # styling my dataframe
 
