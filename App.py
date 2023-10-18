@@ -63,6 +63,9 @@ df.set_table_styles([{
     'selector': 'th',  # Select the table header cells
     'props': [('background-color', 'green'), ('color', 'white')]
 }])
+# Providing Legend for Transmission for user readability
+st.markdown(Legend for Transmission:  
+            `| A: Automatic | AM: Automated Manual | AS: Automatic with Select Shift | AV: Continuously Variable | M: Manual | 3-10: Number of Gears |`)
 
 # displaying my dataframe
 st.table(df)
