@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 # importing the data
-df = pd.read_csv("Sprint3_resulting_dataframe.csv")
+df = pd.read_csv("./data/Sprint3_resulting_dataframe.csv")
 
 # dropping columns not relevant to the user, users may not know how to interpret these values
 # They are only considered with fuel efficiency of vehicles and whether they are green or not, and I have given them green vehicles
